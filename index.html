@@ -11,7 +11,9 @@
 		</style>
 		<script>
 			function escapeHtml(s) {
-				return s
+				if (s === null) return 'null';
+				if (s === undefined) return 'undefined';
+				return s.toString()
 					.replace(/&/g, "&amp;")
 					.replace(/</g, "&lt;")
 					.replace(/>/g, "&gt;")
@@ -20,16 +22,17 @@
 			}
 			function runAndPrint(runnable) {
 				try {
-					runnable();
-					document.write('<p class="success">Run successfully!</p>\n');
+					const returnValue = runnable();
+					document.write('<p class="success">Run successfully. Return value: ' + escapeHtml(returnValue) +'</p>\n');
 				} catch (error) {
-					document.write('<p class="failure">' + escapeHtml(error.toString()) + '</p>\n');
+					document.write('<p class="failure">' + escapeHtml(error) + '</p>\n');
 				}
 			}
 		</script>
 	</head>
 	<body>
 		<h1>JavaScript errors</h1>
+
 		<h2>const a = null;</h2>
 		<script>const a = null;</script>
 		<pre>a();</pre>
@@ -40,5 +43,39 @@
 		<script>runAndPrint(() => a['bbb']);</script>
 		<pre>a.ccc;</pre>
 		<script>runAndPrint(() => a.ccc);</script>
+
+		<h2>const b = undefined;</h2>
+		<script>const b = undefined;</script>
+		<pre>b();</pre>
+		<script>runAndPrint(() => b());</script>
+		<pre>b.toString();</pre>
+		<script>runAndPrint(() => b.toString());</script>
+		<pre>b['bbb'];</pre>
+		<script>runAndPrint(() => b['bbb']);</script>
+		<pre>b.ccc;</pre>
+		<script>runAndPrint(() => b.ccc);</script>
+
+		<h2>const c = 123;</h2>
+		<script>const c = 123;</script>
+		<pre>c();</pre>
+		<script>runAndPrint(() => c());</script>
+		<pre>c.toString();</pre>
+		<script>runAndPrint(() => c.toString());</script>
+		<pre>c['bbb'];</pre>
+		<script>runAndPrint(() => c['bbb']);</script>
+		<pre>c.ccc;</pre>
+		<script>runAndPrint(() => c.ccc);</script>
+
+		<h2>const d = 'a-string';</h2>
+		<script>const d = 'a-string';</script>
+		<pre>d();</pre>
+		<script>runAndPrint(() => d());</script>
+		<pre>d.toString();</pre>
+		<script>runAndPrint(() => d.toString());</script>
+		<pre>d['bbb'];</pre>
+		<script>runAndPrint(() => d['bbb']);</script>
+		<pre>d.ccc;</pre>
+		<script>runAndPrint(() => d.ccc);</script>
+
 	</body>
 </html>
