@@ -33,49 +33,83 @@
 	<body>
 		<h1>JavaScript errors</h1>
 
-		<h2>const a = null;</h2>
-		<script>const a = null;</script>
-		<pre>a();</pre>
-		<script>runAndPrint(() => a());</script>
-		<pre>a.toString();</pre>
-		<script>runAndPrint(() => a.toString());</script>
-		<pre>a['bbb'];</pre>
-		<script>runAndPrint(() => a['bbb']);</script>
-		<pre>a.ccc;</pre>
-		<script>runAndPrint(() => a.ccc);</script>
+		<h2>const nul = null;</h2>
+		<script>const nul = null;</script>
+		<pre>nul();</pre>
+		<script>runAndPrint(() => nul());</script>
+		<pre>nul.toString();</pre>
+		<script>runAndPrint(() => nul.toString());</script>
+		<pre>nul.bbb;</pre>
+		<script>runAndPrint(() => nul.bbb);</script>
+		<pre>nul['ccc'];</pre>
+		<script>runAndPrint(() => nul['ccc']);</script>
+		<pre>nul[null];</pre>
+		<script>runAndPrint(() => nul[null]);</script>
 
-		<h2>const b = undefined;</h2>
-		<script>const b = undefined;</script>
-		<pre>b();</pre>
-		<script>runAndPrint(() => b());</script>
-		<pre>b.toString();</pre>
-		<script>runAndPrint(() => b.toString());</script>
-		<pre>b['bbb'];</pre>
-		<script>runAndPrint(() => b['bbb']);</script>
-		<pre>b.ccc;</pre>
-		<script>runAndPrint(() => b.ccc);</script>
+		<h2>const und = undefined;</h2>
+		<script>const und = undefined;</script>
+		<pre>und();</pre>
+		<script>runAndPrint(() => und());</script>
+		<pre>und.toString();</pre>
+		<script>runAndPrint(() => und.toString());</script>
+		<pre>und.bbb;</pre>
+		<script>runAndPrint(() => und.bbb);</script>
+		<pre>und['ccc'];</pre>
+		<script>runAndPrint(() => und['ccc']);</script>
+		<pre>und[null];</pre>
+		<script>runAndPrint(() => und[null]);</script>
 
-		<h2>const c = 123;</h2>
-		<script>const c = 123;</script>
-		<pre>c();</pre>
-		<script>runAndPrint(() => c());</script>
-		<pre>c.toString();</pre>
-		<script>runAndPrint(() => c.toString());</script>
-		<pre>c['bbb'];</pre>
-		<script>runAndPrint(() => c['bbb']);</script>
-		<pre>c.ccc;</pre>
-		<script>runAndPrint(() => c.ccc);</script>
+		<h2>const num = 123;</h2>
+		<script>const num = 123;</script>
+		<pre>num();</pre>
+		<script>runAndPrint(() => num());</script>
+		<pre>num.toString();</pre>
+		<script>runAndPrint(() => num.toString());</script>
+		<pre>num.bbb;</pre>
+		<script>runAndPrint(() => num.bbb);</script>
+		<pre>num['ccc'];</pre>
+		<script>runAndPrint(() => num['ccc']);</script>
+		<pre>num[null];</pre>
+		<script>runAndPrint(() => num[null]);</script>
 
-		<h2>const d = 'a-string';</h2>
-		<script>const d = 'a-string';</script>
-		<pre>d();</pre>
-		<script>runAndPrint(() => d());</script>
-		<pre>d.toString();</pre>
-		<script>runAndPrint(() => d.toString());</script>
-		<pre>d['bbb'];</pre>
-		<script>runAndPrint(() => d['bbb']);</script>
-		<pre>d.ccc;</pre>
-		<script>runAndPrint(() => d.ccc);</script>
+		<h2>const str = 'a-string';</h2>
+		<script>const str = 'a-string';</script>
+		<pre>str();</pre>
+		<script>runAndPrint(() => str());</script>
+		<pre>str.toString();</pre>
+		<script>runAndPrint(() => str.toString());</script>
+		<pre>str.bbb;</pre>
+		<script>runAndPrint(() => str.bbb);</script>
+		<pre>str['ccc'];</pre>
+		<script>runAndPrint(() => str['ccc']);</script>
+		<pre>str[null];</pre>
+		<script>runAndPrint(() => str[null]);</script>
+
+		<h2>const arr = [123, 'abc'];</h2>
+		<script>const arr = [123, 'abc'];</script>
+		<pre>arr();</pre>
+		<script>runAndPrint(() => arr());</script>
+		<pre>arr.toString();</pre>
+		<script>runAndPrint(() => arr.toString());</script>
+		<pre>arr.bbb;</pre>
+		<script>runAndPrint(() => arr.bbb);</script>
+		<pre>arr['ccc'];</pre>
+		<script>runAndPrint(() => arr['ccc']);</script>
+		<pre>arr[null];</pre>
+		<script>runAndPrint(() => arr[null]);</script>
+
+		<h2>const obj = { abc: 123, def: '123' };</h2>
+		<script>const obj = { abc: 123, def: '123' };</script>
+		<pre>obj();</pre>
+		<script>runAndPrint(() => obj());</script>
+		<pre>obj.toString();</pre>
+		<script>runAndPrint(() => obj.toString());</script>
+		<pre>obj.bbb;</pre>
+		<script>runAndPrint(() => obj.bbb);</script>
+		<pre>obj['ccc'];</pre>
+		<script>runAndPrint(() => obj['ccc']);</script>
+		<pre>obj[null];</pre>
+		<script>runAndPrint(() => obj[null]);</script>
 
 	</body>
 </html>
