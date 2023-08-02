@@ -45,6 +45,10 @@
 		<script>runAndPrint(() => nul['ccc']);</script>
 		<pre>nul[null];</pre>
 		<script>runAndPrint(() => nul[null]);</script>
+		<pre>const [ ddd ] = nul;</pre>
+		<script>runAndPrint(() => { const [ ddd ] = nul; });</script>
+		<pre>const { eee } = nul;</pre>
+		<script>runAndPrint(() => { const { eee } = nul; });</script>
 
 		<h2>const und = undefined;</h2>
 		<script>const und = undefined;</script>
@@ -58,6 +62,10 @@
 		<script>runAndPrint(() => und['ccc']);</script>
 		<pre>und[null];</pre>
 		<script>runAndPrint(() => und[null]);</script>
+		<pre>const [ ddd ] = und;</pre>
+		<script>runAndPrint(() => { const [ ddd ] = und; });</script>
+		<pre>const { eee } = und;</pre>
+		<script>runAndPrint(() => { const { eee } = und; });</script>
 
 		<h2>const num = 123;</h2>
 		<script>const num = 123;</script>
@@ -71,6 +79,10 @@
 		<script>runAndPrint(() => num['ccc']);</script>
 		<pre>num[null];</pre>
 		<script>runAndPrint(() => num[null]);</script>
+		<pre>const [ ddd ] = num;</pre>
+		<script>runAndPrint(() => { const [ ddd ] = num; });</script>
+		<pre>const { eee } = num;</pre>
+		<script>runAndPrint(() => { const { eee } = num; });</script>
 
 		<h2>const str = 'a-string';</h2>
 		<script>const str = 'a-string';</script>
@@ -84,6 +96,10 @@
 		<script>runAndPrint(() => str['ccc']);</script>
 		<pre>str[null];</pre>
 		<script>runAndPrint(() => str[null]);</script>
+		<pre>const [ ddd ] = str;</pre>
+		<script>runAndPrint(() => { const [ ddd ] = str; });</script>
+		<pre>const { eee } = str;</pre>
+		<script>runAndPrint(() => { const { eee } = str; });</script>
 
 		<h2>const arr = [123, 'abc'];</h2>
 		<script>const arr = [123, 'abc'];</script>
@@ -97,6 +113,10 @@
 		<script>runAndPrint(() => arr['ccc']);</script>
 		<pre>arr[null];</pre>
 		<script>runAndPrint(() => arr[null]);</script>
+		<pre>const [ ddd ] = arr;</pre>
+		<script>runAndPrint(() => { const [ ddd ] = arr; });</script>
+		<pre>const { eee } = arr;</pre>
+		<script>runAndPrint(() => { const { eee } = arr; });</script>
 
 		<h2>const obj = { abc: 123, def: '123' };</h2>
 		<script>const obj = { abc: 123, def: '123' };</script>
@@ -110,6 +130,38 @@
 		<script>runAndPrint(() => obj['ccc']);</script>
 		<pre>obj[null];</pre>
 		<script>runAndPrint(() => obj[null]);</script>
+		<pre>const [ ddd ] = obj;</pre>
+		<script>runAndPrint(() => { const [ ddd ] = obj; });</script>
+		<pre>const { eee } = obj;</pre>
+		<script>runAndPrint(() => { const { eee } = obj; });</script>
+
+		<h2>Object.assign:</h2>
+		<pre>Object.assign({});</pre>
+		<script>runAndPrint(() => JSON.stringify(Object.assign({})));</script>
+		<pre>Object.assign({}, null);</pre>
+		<script>runAndPrint(() => JSON.stringify(Object.assign({}, null)));</script>
+		<pre>Object.assign({}, undefined);</pre>
+		<script>runAndPrint(() => JSON.stringify(Object.assign({}, undefined)));</script>
+		<pre>Object.assign({ abc: 123 }, { def: '123' });</pre>
+		<script>runAndPrint(() => JSON.stringify(Object.assign({ abc: 123 }, { def: '123' })));</script>
+		<pre>Object.assign({}, { abc: 123 }, { def: '123' });</pre>
+		<script>runAndPrint(() => JSON.stringify(Object.assign({}, { abc: 123 }, { def: '123' })));</script>
+		<pre>Object.assign();</pre>
+		<script>runAndPrint(() => Object.assign());</script>
+		<pre>Object.assign(null);</pre>
+		<script>runAndPrint(() => Object.assign(null));</script>
+		<pre>Object.assign(undefined);</pre>
+		<script>runAndPrint(() => Object.assign(undefined));</script>
+
+		<h2>Spread:</h2>
+		<pre>{...null};</pre>
+		<script>runAndPrint(() => JSON.stringify({...null}));</script>
+		<pre>[...null];</pre>
+		<script>runAndPrint(() => [...null]);</script>
+		<pre>{...undefined};</pre>
+		<script>runAndPrint(() => JSON.stringify({...undefined}));</script>
+		<pre>[...undefined];</pre>
+		<script>runAndPrint(() => [...undefined]);</script>
 
 	</body>
 </html>
